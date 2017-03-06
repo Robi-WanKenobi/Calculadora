@@ -5,5 +5,5 @@ package Calculadora;
  */
 public interface Operacion {
 
-    double calculate();
+    double calculate() throws InfiniteException;
 }

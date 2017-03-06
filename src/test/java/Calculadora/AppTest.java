@@ -43,6 +43,18 @@ public class AppTest
     }
     @org.junit.Test
     public void validDivision(){
-        assertTrue(new Division(6,3).calculate() == 2);
+        try {
+            assertTrue(new Division(6,3).calculate() == 2);
+        } catch (InfiniteException e) {
+            e.getMessage();
+        }
+    }
+    @org.junit.Test
+    public void infiniteResult(){
+        try {
+            assertTrue(new Division(6,0).calculate() == 2);
+        } catch (InfiniteException e) {
+            e.getMessage();
+        }
     }
 }

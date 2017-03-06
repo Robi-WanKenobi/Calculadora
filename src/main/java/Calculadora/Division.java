@@ -12,7 +12,10 @@ public class Division implements Operacion {
         this.b = b;
     }
 
-    public double calculate() {
+    public double calculate() throws InfiniteException {
+        if (b==0){
+            throw new InfiniteException("Math error");
+        }
         return (a/b);
     }
 }
